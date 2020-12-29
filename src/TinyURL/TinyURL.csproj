@@ -3,11 +3,10 @@
   <Import Project="../../common.props"></Import>
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
-    <PackageIcon>TinyURL.png</PackageIcon>
+    <PackageId>TinyURL</PackageId>
   </PropertyGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\TinyURL.SqlServer\TinyURL.SqlServer.csproj" />
+    <ProjectReference Include="..\TinyURL.Core\TinyURL.Core.csproj" />
   </ItemGroup>
 
 </Project>

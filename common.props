@@ -10,8 +10,9 @@
     <Product>TinyURL</Product>
     <Description>Generic shortcode URL implementation in CSharp.</Description>
     <RepositoryUrl>https://github.com/hueifeng/TinyURL</RepositoryUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryType>git</RepositoryType>
-    <PackageIcon>..\..\TinyURL.png</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/hueifeng/TinyURL/master/TinyURL.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/hueifeng/TinyURL</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/hueifeng/TinyURL/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 </Project>
