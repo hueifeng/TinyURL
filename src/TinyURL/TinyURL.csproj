@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="../../common.props"></Import>
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+    <PackageIcon>TinyURL.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
