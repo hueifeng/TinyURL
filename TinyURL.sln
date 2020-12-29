@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A22CF255-341D-4803-96D3-1479518AB408}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{951E51F6-C0B3-425F-BC1C-62AC6D8DABDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D19F85E8-13F7-47CF-BC09-F1EE5EEA06C2}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyURL.Sample", "sample\TinyURL.Sample\TinyURL.Sample.csproj", "{B7C7ECE7-5691-41F2-873C-2871821EAA47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyURL", "src\TinyURL\TinyURL.csproj", "{6E06F6FF-39A6-42EF-BA10-449FDC01FF20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyURL.Core", "src\TinyURL.Core\TinyURL.Core.csproj", "{4EC9790A-6377-420F-BE82-41908457D57B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyURL.SqlServer", "src\TinyURL.SqlServer\TinyURL.SqlServer.csproj", "{05EE95A0-F881-45D3-911F-452C8DCDEA13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7C7ECE7-5691-41F2-873C-2871821EAA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C7ECE7-5691-41F2-873C-2871821EAA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C7ECE7-5691-41F2-873C-2871821EAA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C7ECE7-5691-41F2-873C-2871821EAA47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E06F6FF-39A6-42EF-BA10-449FDC01FF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E06F6FF-39A6-42EF-BA10-449FDC01FF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E06F6FF-39A6-42EF-BA10-449FDC01FF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E06F6FF-39A6-42EF-BA10-449FDC01FF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EC9790A-6377-420F-BE82-41908457D57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EC9790A-6377-420F-BE82-41908457D57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EC9790A-6377-420F-BE82-41908457D57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EC9790A-6377-420F-BE82-41908457D57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05EE95A0-F881-45D3-911F-452C8DCDEA13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05EE95A0-F881-45D3-911F-452C8DCDEA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05EE95A0-F881-45D3-911F-452C8DCDEA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05EE95A0-F881-45D3-911F-452C8DCDEA13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7C7ECE7-5691-41F2-873C-2871821EAA47} = {951E51F6-C0B3-425F-BC1C-62AC6D8DABDD}
+		{6E06F6FF-39A6-42EF-BA10-449FDC01FF20} = {A22CF255-341D-4803-96D3-1479518AB408}
+		{4EC9790A-6377-420F-BE82-41908457D57B} = {A22CF255-341D-4803-96D3-1479518AB408}
+		{05EE95A0-F881-45D3-911F-452C8DCDEA13} = {A22CF255-341D-4803-96D3-1479518AB408}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5A4796C-9D87-4640-9ED3-AC88FE5A7AAB}
+	EndGlobalSection
+EndGlobal
