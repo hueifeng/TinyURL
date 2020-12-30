@@ -16,10 +16,6 @@ jobs:
     runs-on:  windows-latest
     name: Update NuGet package
     steps:
-      - name: Get version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-
       - name: Checkout repository
         uses: actions/checkout@v1
 
