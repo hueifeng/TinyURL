@@ -3,6 +3,24 @@
     <image src="TinyURL.png"  height="250">
  </p>
  <p align="center">一个简单、稳定、安全、快速的短链生成库。</p>
+
+<p align="center">
+<a href="https://www.nuget.org/packages/TinyURL.Core">
+      <image src="https://img.shields.io/nuget/v/TinyURL.Core.svg?style=flat-square" alt="nuget">
+</a>
+    
+<a href="https://github.com/hueifeng/TinyURL/workflows/.NET%20Core/badge.svg">
+      <image src="https://github.com/hueifeng/TinyURL/workflows/.NET%20Core/badge.svg" alt="NETCore">
+</a>
+    
+<a href="https://www.nuget.org/stats/packages/TinyURL.Core?groupby=Version">
+      <image src="https://img.shields.io/nuget/dt/TinyURL.Core.svg?style=flat-square" alt="stats">
+</a>
+    
+<a href="https://raw.githubusercontent.com/hueifeng/TinyURL/master/LICENSE">
+    <image src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT">
+</a>
+</p>
 </div>
 
 
@@ -22,7 +40,13 @@
 Install-Package TinyURL
 ```
 
-2、获取短码
+2、引入持久层库
+
+```powershell
+Install-Package TinyURL.SqlServer
+```
+
+3、短码获取
 
 ```csharp
 TinyURL shortUrl = new TinyURL(
