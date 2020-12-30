@@ -24,13 +24,16 @@ jobs:
           source-url: https://nuget.pkg.github.com/hueifeng/index.json
         env:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}        
-          
+      
       - name: Build solution and generate NuGet package
         run: |  
           dotnet pack -c Release -o out  
           
       - name: Push generated package to Nuget registry
-        run: dotnet nuget push **/*.nupkg --api-key ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
+        run: |
+          Get-ChildItem .\out -Filter *.nupkg |
+          Where-Object { !$_.Name.Contains('preview') } |
+          ForEach-Object { dotnet nuget push $_ --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{secrets.NUGET_API_KEY}} }
 
       - name: Push generated package to GitHub registry
         run: dotnet nuget push **/*.nupkg --skip-duplicate --no-symbols true
