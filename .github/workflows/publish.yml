@@ -24,18 +24,7 @@ jobs:
           source-url: https://nuget.pkg.github.com/hueifeng/index.json
         env:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}    
-      
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          draft: false
-          prerelease: false
-      
+    
       - name: Build solution and generate NuGet package
         run: |  
           dotnet pack -c Release -o out  
