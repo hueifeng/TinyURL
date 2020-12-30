@@ -8,11 +8,18 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>HueiFeng</Authors>
     <Product>TinyURL</Product>
+    <IsPackable>true</IsPackable>
     <Description>Generic shortcode URL implementation in CSharp.</Description>
     <RepositoryUrl>https://github.com/hueifeng/TinyURL</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageIconUrl>https://raw.githubusercontent.com/hueifeng/TinyURL/master/TinyURL.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/hueifeng/TinyURL</PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/hueifeng/TinyURL/master/LICENSE</PackageLicenseUrl>
+    <PackageIcon>Package.png</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/hueifeng/TinyURL/master/Package.png</PackageIconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\Package.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 </Project>
