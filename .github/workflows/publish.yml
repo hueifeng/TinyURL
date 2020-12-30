@@ -5,7 +5,7 @@ on:
     branches:
       - master
     tags:
-     - 'v*'
+    - 'v*'
   pull_request:
     types: [closed]
     branches:
@@ -16,6 +16,9 @@ jobs:
     runs-on:  windows-latest
     name: Update NuGet package
     steps:
+      - name: Get version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
       - name: Checkout repository
         uses: actions/checkout@v1
@@ -26,15 +29,14 @@ jobs:
           source-url: https://nuget.pkg.github.com/hueifeng/index.json
         env:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}    
-      
+
       - name: Create Release
-        id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
+          tag_name: ${{ steps.get_version.outputs.VERSION }}
+          release_name: ${{ steps.get_version.outputs.VERSION }}
           draft: false
           prerelease: false
       
