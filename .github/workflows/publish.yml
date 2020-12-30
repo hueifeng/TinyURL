@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    tags:
+     - 'v*'
   pull_request:
     types: [closed]
     branches:
@@ -14,8 +16,9 @@ jobs:
     runs-on:  windows-latest
     name: Update NuGet package
     steps:
+
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
 
       - name: Setup .NET Core @ Latest
         uses: actions/setup-dotnet@v1
@@ -23,7 +26,7 @@ jobs:
           source-url: https://nuget.pkg.github.com/hueifeng/index.json
         env:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}    
-
+      
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -44,7 +47,6 @@ jobs:
           Get-ChildItem .\out -Filter *.nupkg |
           Where-Object { !$_.Name.Contains('preview') } |
           ForEach-Object { dotnet nuget push $_ --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{secrets.NUGET_API_KEY}} }
-
       - name: Push generated package to GitHub registry
         run: dotnet nuget push **/*.nupkg --skip-duplicate --no-symbols true
       
