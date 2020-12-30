@@ -2,7 +2,7 @@
 <p align="center">
     <image src="TinyURL.png"  height="250">
  </p>
- <p align="center">一个简单、稳定、安全、快速的短链生成库。</p>
+ <p align="center">A simple, stable, safe, and fast short-chain generation library.</p>
 
 <p align="center">
 <a href="https://www.nuget.org/packages/TinyURL.Core">
@@ -23,30 +23,33 @@
 </p>
 </div>
 
+## Description
 
-短码通过`[a - z, A - Z, 0 - 9]`这62个字符组成，短码长度一般不要超过8位。比较常用的都是6位，6位短码已有568亿种的组合：(26+26+10)^6=568002355884。
+Language: English | [中文](README.zh-cn.md)
 
-## 特性
+The shortcode is composed of 62 characters of `[a-z, A-Z, 0-9]`, the length of the shortcode is 6 digits, and the 6-digit shortcode supports 56.8 billion combinations: (26+26+10)^6 =568002355884.
 
-- 灵活引用库，简单易用
-- 持久化存储原始数据
-- 采用自增ID和MurmurHash算法，无碰撞短码，安全可靠
+## Features
 
-## 快速入门
+- Flexible reference library, easy to use
+- Persistent storage of original data
+- Self-increasing ID and MurmurHash algorithm are adopted to ensure the safety and reliability of shortcode without collision
 
-1、通过Nuget安装组件
+## Quick Start
+
+1、Install Package
 
 ```powershell
 Install-Package TinyURL
 ```
 
-2、引入持久层库
+2、Install the persistence library
 
 ```powershell
 Install-Package TinyURL.SqlServer
 ```
 
-3、短码获取
+3、Short code
 
 ```csharp
 TinyURL shortUrl = new TinyURL(
@@ -54,7 +57,7 @@ TinyURL shortUrl = new TinyURL(
 await shortUrl.Generator(url);
 ```
 
-## 表结构
+## Table Structure
 
   <table> 
    <thead> 
@@ -72,17 +75,17 @@ await shortUrl.Generator(url);
     <tr> 
      <td>Id</td> 
      <td>[int] IDENTITY(1,1) NOT NULL</td> 
-     <td>自增ID</td> 
+     <td>identity ID</td> 
     </tr> 
     <tr> 
      <td>Code</td> 
      <td>[nvarchar] (6)</td> 
-     <td>短码</td> 
+     <td>short code</td> 
     </tr> 
     <tr> 
      <td>URL</td> 
      <td>[nvarchar] (128)</td> 
-     <td>原链接</td> 
+     <td>Original link</td> 
     </tr> 
     <tr> 
      <td>HashVal</td> 
@@ -92,15 +95,15 @@ await shortUrl.Generator(url);
     <tr> 
      <td>InsertAt</td> 
      <td>[datetime]</td> 
-     <td>创建时间</td> 
+     <td>Creation time</td> 
     </tr> 
    </tbody> 
   </table>
 
 
-## 贡献
+## Contribution
 
-如果您有想法可以加入进来，或者发现本项目中有需要改进的代码，欢迎Fork并提交PR！
+If you have any ideas you can join in, or find that there is code in this project that needs improvement, welcome to Fork and submit a PR!
 
 ## License
 
