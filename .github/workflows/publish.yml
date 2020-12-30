@@ -32,7 +32,6 @@ jobs:
       - name: Push generated package to Nuget registry
         run: |
           Get-ChildItem .\out -Filter *.nupkg |
-          Where-Object { !$_.Name.Contains('preview') } |
           ForEach-Object { dotnet nuget push $_ --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{secrets.NUGET_API_KEY}} }
 
       - name: Push generated package to GitHub registry
