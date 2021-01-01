@@ -107,4 +107,4 @@ If you have any ideas you can join in, or find that there is code in this projec
 
 ## License
 
-MIT
+[MIT](LICENSE)
