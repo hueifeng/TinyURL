@@ -5,7 +5,7 @@
  <p align="center">A simple, stable, safe, and fast short-chain generation library.</p>
 
 <p align="center">
-<a href="https://www.nuget.org/packages/TinyURL.Core">
+<a href="https://www.nuget.org/packages/TinyURL">
       <image src="https://img.shields.io/nuget/v/TinyURL.Core.svg?style=flat-square" alt="nuget">
 </a>
     
