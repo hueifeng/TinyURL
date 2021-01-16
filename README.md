@@ -6,7 +6,7 @@
 
 <p align="center">
 <a href="https://www.nuget.org/packages/TinyURL">
-      <image src="https://img.shields.io/nuget/v/TinyURL.Core.svg?style=flat-square" alt="nuget">
+      <image src="https://img.shields.io/nuget/v/TinyURL.svg?style=flat-square" alt="nuget">
 </a>
     
 <a href="https://github.com/hueifeng/TinyURL/workflows/.NET%20Core/badge.svg">
