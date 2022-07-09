@@ -20,6 +20,9 @@
 <a href="https://raw.githubusercontent.com/hueifeng/TinyURL/master/LICENSE">
     <image src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT">
 </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fhueifeng%2FTinyURL?ref=badge_shield">
+    <image src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhueifeng%2FTinyURL.svg?type=shield" alt="FOSSA Status">
+</a>
 </p>
 </div>
 
