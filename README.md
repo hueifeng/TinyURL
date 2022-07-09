@@ -23,7 +23,12 @@
 </p>
 </div>
 
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhueifeng%2FTinyURL.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhueifeng%2FTinyURL?ref=badge_large)
+
 ## Description
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhueifeng%2FTinyURL.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhueifeng%2FTinyURL?ref=badge_shield)
+
 
 Language: English | [中文](README.zh-cn.md)
 
